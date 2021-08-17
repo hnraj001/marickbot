@@ -1,0 +1,25 @@
+{
+  "name": "marickbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "canvas": "^2.8.0",
+    "discord-buttons": "^4.0.0",
+    "discord-paginationembed": "^2.1.0",
+    "discord.js": "^12.5.3",
+    "fs": "^0.0.1-security",
+    "google-spreadsheet": "^3.1.15",
+    "googleapis": "^39.2.0",
+    "node-cron": "^3.0.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

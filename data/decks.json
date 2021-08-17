@@ -1,0 +1,26 @@
+[
+    {
+        "cards": [
+            {
+                "image": "https://media.discordapp.net/attachments/876461403538612225/876481880726331392/2.png",
+                "meaning": "Working: \\n\n Rune of cutting, sharpness, and pain. Brute strength, destructive power of chaos and ruin. Also of death and regeneration, transformation and breaking down barriers. The power of this rune is wild and a strong mind/will is needed to direct it. \n Brings destruction and confusion. It is used in the destruction of enemies and in curses. Used to control another or render the individual defenseless. However in positive working it's a rune of healing. Enhances wisdom, courage, physical strength, independence and leadership.",
+                "name": "Thurisaz",
+                "number": 1,
+                "reversed": {
+                    "meaning": "**Reversed meaning** none yet"
+                }
+            },
+            {
+                "image": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/RWS_Tarot_03_Empress.jpg/220px-RWS_Tarot_03_Empress.jpg",
+                "meaning": "Working: \n\n Rune of cutting, sharpness, and pain. Brute strength, destructive power of chaos and ruin. Also of death and regeneration, transformation and breaking down barriers. The power of this rune is wild and a strong mind/will is needed to direct it. \n Brings destruction and confusion. It is used in the destruction of enemies and in curses. Used to control another or render the individual defenseless. However in positive working it's a rune of healing. Enhances wisdom, courage, physical strength, independence and leadership.",
+                "name": "Isa",
+                "number": 2,
+                "reversed": {
+                    "meaning": "Rune of coldness"
+                }
+            }
+        ],
+        "name": "Runes",
+        "number": 1
+    }
+]

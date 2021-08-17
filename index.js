@@ -23,98 +23,101 @@ const addtarot = require("./system/commands/addtarot");
 client.on("ready", async () => {
   console.log(`[${new Date()}] Bot online`);
 
-  client.api
-    .applications(client.user.id)
-    .guilds(client.guilds.cache.first().id)
-    .commands.post({
-      data: {
-        name: "startquiz",
-        description: "Starts a new quiz/game",
-        options: [
-          {
-            name: "type",
-            description: "Quiz type.",
-            type: 3,
-            choices: [
-              {
-                name: "Multi style",
-                value: "multi",
-              },
-              {
-                name: "Single answer",
-                value: "single",
-              },
-              {
-                name: "Image",
-                value: "image",
-              },
-              {
-                name: "Numbers",
-                value: "numbers",
-              },
-            ],
-            required: true,
-          },
-          {
-            name: "questions",
-            description: "Number of questions (Optional)",
-            type: 4,
-            required: false,
-          },
-          {
-            name: "minutes",
-            description: "Minutes until quiz starts (Optional)",
-            type: 4,
-            required: false,
-          },
-        ],
-        // possible options here e.g. options: [{...}]
-      },
-    });
+client.guilds.cache.forEach((g) => {
+    client.api
+      .applications(client.user.id)
+      .guilds(g.id)
+      .commands.post({
+        data: {
+          name: "startquiz",
+          description: "Starts a new quiz/game",
+          options: [
+            {
+              name: "type",
+              description: "Quiz type.",
+              type: 3,
+              choices: [
+                {
+                  name: "Multi style",
+                  value: "multi",
+                },
+                {
+                  name: "Single answer",
+                  value: "single",
+                },
+                {
+                  name: "Image",
+                  value: "image",
+                },
+                {
+                  name: "Numbers",
+                  value: "numbers",
+                },
+              ],
+              required: true,
+            },
+            {
+              name: "questions",
+              description: "Number of questions (Optional)",
+              type: 4,
+              required: false,
+            },
+            {
+              name: "minutes",
+              description: "Minutes until quiz starts (Optional)",
+              type: 4,
+              required: false,
+            },
+          ],
+          // possible options here e.g. options: [{...}]
+        },
+      });
 
-  client.api
-    .applications(client.user.id)
-    .guilds(client.guilds.cache.first().id)
-    .commands.post({
-      data: {
-        name: "announce",
-        description: "Sends an announcement to a specific channel",
-        options: [
-          {
-            name: "message",
-            description: "The main message for announcement.",
-            type: 3,
-            required: true,
-          },
-          {
-            name: "color",
-            description: "The color for message. (i.e. DARK_GREEN or 	#006400)",
-            type: 3,
-            required: true,
-          },
-          {
-            name: "channel",
-            description: "The channel where message should be sent.",
-            type: 7,
-            required: true,
-          },
-          {
-            name: "role_mention",
-            description:
-              "The role to mention (leave the optional parameter to avoid mentioning).",
-            type: 8,
-            required: false,
-          },
-          {
-            name: "title",
-            description: "The optional title.",
-            type: 3,
-            required: false,
-          },
-        ],
-        // possible options here e.g. options: [{...}]
-      },
-    });
+    client.api
+      .applications(client.user.id)
+      .guilds(g.id)
+      .commands.post({
+        data: {
+          name: "announce",
+          description: "Sends an announcement to a specific channel",
+          options: [
+            {
+              name: "message",
+              description: "The main message for announcement.",
+              type: 3,
+              required: true,
+            },
+            {
+              name: "color",
+              description:
+                "The color for message. (i.e. DARK_GREEN or 	#006400)",
+              type: 3,
+              required: true,
+            },
+            {
+              name: "channel",
+              description: "The channel where message should be sent.",
+              type: 7,
+              required: true,
+            },
+            {
+              name: "role_mention",
+              description:
+                "The role to mention (leave the optional parameter to avoid mentioning).",
+              type: 8,
+              required: false,
+            },
+            {
+              name: "title",
+              description: "The optional title.",
+              type: 3,
+              required: false,
+            },
+          ],
+          // possible options here e.g. options: [{...}]
+        },
+      });
+  });
 });
 
 client.on("message", (message) => {
